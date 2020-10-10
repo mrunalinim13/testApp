@@ -1,0 +1,35 @@
+.custom-popup {
+    
+    p {
+        text-align: center;  
+        color: black; 
+    }
+    h2 {
+        text-align: center;  
+        color: black;
+        font-size: 14px;
+    }
+    ion-list {
+        padding: 5%;
+        background: transparent;
+        ion-item {
+            --background :transparent;
+            color: black;
+            font-size: 14px;
+        }
+    }
+}
+.hs-ok-button {
+text-transform: none;
+font-weight: 400;
+width: -webkit-fill-available;
+height: 40px;; 
+}
+.hs-btn-div {
+
+}
+.hs-select-option {
+    margin-left: -5%;
+    position: fixed;
+    width: -webkit-fill-available;
+}

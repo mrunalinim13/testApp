@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rate Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        Name
+      </ion-col>
+      <ion-col size="4">
+        Dry Clean/Laundary
+      </ion-col>
+      <ion-col size="4">
+        Steam Iron
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let rateData of rateCardDetails">
+      <ion-col size="4"> 
+        {{rateData.key}}
+      </ion-col>
+      <ion-col size="4"> 
+        {{rateData.dryClean}}/-
+      </ion-col>
+      <ion-col size="4"> 
+        {{rateData.steamIron}}/-
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

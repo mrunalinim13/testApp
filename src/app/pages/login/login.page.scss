@@ -1,0 +1,15 @@
+ion-list {
+    padding: 5%;
+    background: transparent;
+    ion-item {
+        --background :transparent;
+        color: black;
+        font-size: 14px;
+    }
+}
+.hs-ok-button {
+    text-transform: none;
+    font-weight: 400;
+    width: -webkit-fill-available;
+    height: 40px;; 
+    }

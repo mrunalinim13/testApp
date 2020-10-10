@@ -1,0 +1,48 @@
+<ion-content>
+  <ion-list>
+
+    <form [formGroup]="loginFormOne">
+      <ion-item>
+        <ion-label position="floating">
+          Mobile Number
+        </ion-label>
+        <ion-input maxlength="10" minlength="10" formControlName="mobileNo" type="tel">
+        </ion-input>
+      </ion-item>
+    </form>
+    <form [formGroup]="loginFormTwo">
+      <ion-item *ngIf="otpReceived">
+        <ion-label position="floating">
+          OTP
+        </ion-label>
+        <ion-input maxlength="4" minlength="4" formControlName="otp" type="password">
+        </ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <div class="hs-btn-div">
+    <ion-row *ngIf="!otpReceived">
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" [disabled]="!loginFormOne.valid" (click)="getOTP()">
+          Send OTP
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="otpReceived">
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" [disabled]="!loginFormTwo.valid" (click)="gotoHomePage()">
+          Login
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

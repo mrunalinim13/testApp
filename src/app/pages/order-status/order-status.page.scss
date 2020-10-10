@@ -1,0 +1,23 @@
+.hs-row-data {
+    ion-col:nth-child(odd) {
+        text-align: left;
+    } 
+    ion-col:nth-child(even) {
+        text-align: right;
+    } 
+    ion-col {
+        margin-bottom: -6%;
+        margin-top: -6%;
+        padding: 5%;
+        p {
+            font-size: 14px;
+            font-weight: 600;
+
+        }
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            color: gray;
+        }
+    }
+}

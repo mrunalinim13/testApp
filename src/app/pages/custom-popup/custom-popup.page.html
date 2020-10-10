@@ -1,0 +1,161 @@
+<ion-content class="custom-popup" *ngIf="popupName=='alert'">
+  <ion-row>
+    <ion-col>
+      <!-- Image  -->
+    </ion-col>
+  </ion-row>
+  <p>
+    {{alertMessage}}
+  </p>
+  <div class="hs-btn-div">
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" (click)="cancelClicked()">
+          {{alertButtonText}}
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-content class="custom-popup" *ngIf="popupName=='confirmPopup'">
+  <h2>
+    Request Pickup
+  </h2>
+
+  <ion-list>
+    <form [formGroup]="requestForm">
+      <ion-item>
+        <ion-select class="hs-select-option" interface="popover" placeholder="Select Laundry Type" formControlName="type">
+          <ion-select-option value="Steam Iron">Steam Iron</ion-select-option>
+          <ion-select-option value="Dryclean">Dryclean</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Date
+        </ion-label>
+        <ion-datetime formControlName="date" [min]="minDate" displayFormat="DD MMM YYYY"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Time
+        </ion-label>
+        <ion-datetime formControlName="time" displayFormat="HH:mm"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Total Quantity
+        </ion-label>
+        <ion-input type="tel" formControlName="qty" maxlength="4" [(ngModel)]="qty">
+        </ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <div class="hs-btn-div">
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" (click)="cancelClicked()">
+          {{alertButtonText1}}
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" [disabled]="!requestForm.valid" expand="round" (click)="saveInfo()">
+          {{alertButtonText2}}
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-content class="custom-popup" *ngIf="popupName=='profile'">
+  <ion-list>
+    <form [formGroup]="profileForm">
+      <ion-item>
+        <ion-label position="floating">
+          Name
+        </ion-label>
+        <ion-input formControlName="name" type="text"> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Mobile
+        </ion-label>
+        <ion-input maxlength="10" minlength="10" formControlName="mobileNo" type="tel">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Address
+        </ion-label>
+        <ion-textarea type="tel" formControlName="address">
+        </ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Pincode
+        </ion-label>
+        <ion-input type="tel" formControlName="pin" maxlength="6">
+        </ion-input>
+      </ion-item>
+
+    </form>
+  </ion-list>
+
+  <div class="hs-btn-div">
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" (click)="cancelClicked()">
+          {{alertButtonText1}}
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" [disabled]="!profileForm.valid" (click)="cancelClicked()">
+          {{alertButtonText2}}
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-content class="custom-popup" *ngIf="popupName=='confirmLogout'">
+  <ion-row>
+    <ion-col>
+      <!-- Image  -->
+    </ion-col>
+  </ion-row>
+  <p>
+    {{alertMessage}}
+  </p>
+  <div class="hs-btn-div">
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" (click)="cancelClicked()">
+          {{alertButtonText1}}
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="hs-ok-button" expand="round" (click)="okClicked()">
+          {{alertButtonText2}}
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

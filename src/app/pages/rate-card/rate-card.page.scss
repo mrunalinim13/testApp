@@ -1,0 +1,13 @@
+
+ion-grid {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    ion-row:nth-child(1) {
+        font-weight: 700;
+    }
+}
+
+    ion-col {
+        border:1px solid lightgray;
+    }
