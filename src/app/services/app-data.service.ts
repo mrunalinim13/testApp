@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CustomPopupPage } from "../pages/custom-popup/custom-popup.page";
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+
 @Injectable({
   providedIn: 'root'
 })

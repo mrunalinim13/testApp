@@ -5,12 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase';
 const config = {
-  apiKey: 'AIzaSyAYKL_l35VbtQHaYqO1nn5LxqryWSwpLqo',
-  authDomain: 'otpauth-e574e.firebaseapp.com',
-  databaseURL: 'https://otpauth-e574e.firebaseio.com/',
-  projectId: 'otpauth-e574e',
-  storageBucket: 'otpauth-e574e.appspot.com',
-//messagingSenderId: '648918167989'
+  apiKey: "AIzaSyCxtigT7OFvobvkJ1sG9BuGx5tET5F_kRs",
+  authDomain: "otpauth-e574e.firebaseapp.com",
+  databaseURL: "https://otpauth-e574e.firebaseio.com",
+  projectId: "otpauth-e574e",
+  storageBucket: "otpauth-e574e.appspot.com",
+  messagingSenderId: "648918167989",
+  appId: "1:648918167989:web:f00f346b81847021db69fc"
 }
 @Component({
   selector: 'app-root',
