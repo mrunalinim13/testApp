@@ -5,18 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    // apiKey: 'AIzaSyAJTSViGj_qLOUnFqKH1j-NTeiOAhY-0Co',
-    // authDomain: 'laundryapp-a34bf.firebaseapp.com',
-    // databaseURL: 'https://laundryapp-a34bf.firebaseio.com/',
-    // projectId: 'laundryapp-a34bf',
-    // storageBucket: 'laundryapp-a34bf.appspot.com',
-    // messagingSenderId: '387790507624'
-    apiKey: 'AIzaSyAYKL_l35VbtQHaYqO1nn5LxqryWSwpLqo',
-    authDomain: 'otpauth-e574e.firebaseapp.com',
-    databaseURL: 'https://otpauth-e574e.firebaseio.com/',
-    projectId: 'otpauth-e574e',
-    storageBucket: 'otpauth-e574e.appspot.com',
-    messagingSenderId: '648918167989'
+    apiKey: "AIzaSyAYKL_l35VbtQHaYqO1nn5LxqryWSwpLqo",
+    authDomain: 'laundryapp-a34bf.firebaseapp.com',
+    databaseURL: 'https://laundryapp-a34bf.firebaseio.com/',
+    projectId: 'laundryapp-a34bf',
+    storageBucket: 'laundryapp-a34bf.appspot.com',
+    messagingSenderId: '648918167989',
+    appId: "1:648918167989:web:f00f346b81847021db69fc"
   }
 };
 
