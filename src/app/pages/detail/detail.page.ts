@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from 'Firebase';
+//import * as firebase from 'Firebase';
 import { ActivatedRoute, Router } from '@angular/router';
 export const snapshotToObject = snapshot => {
   let item = snapshot.val();
@@ -15,12 +15,12 @@ export const snapshotToObject = snapshot => {
 export class DetailPage implements OnInit {
   info = {};
   constructor(
-    private route: ActivatedRoute,
+    public route: ActivatedRoute,
     public router: Router
   ) { 
-    firebase.database().ref('infos/'+this.route.snapshot.paramMap.get('key')).on('value', resp => {
-      this.info = snapshotToObject(resp);
-    });
+    //firebase.database().ref('infos/'+this.route.snapshot.paramMap.get('key')).on('value', resp => {
+    //  this.info = snapshotToObject(resp);
+    //});
   }
 
   ngOnInit() {

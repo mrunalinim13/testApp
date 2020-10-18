@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { AppDataService } from '../services/app-data.service';
-import * as firebase from 'Firebase';
+//import * as firebase from 'Firebase';
 import { AlertController } from '@ionic/angular';
 export const snapshotToArray = snapshot => {
   let returnArr = [];
@@ -20,7 +20,7 @@ export const snapshotToArray = snapshot => {
 })
 export class HomePage implements OnInit {
   infos = [];
-  ref = firebase.database().ref('infos/');
+//  ref = firebase.database().ref('infos/');
   clientHomeOptionList = [{
     id: "1",
     optionName: "Request Pickup",
@@ -42,10 +42,10 @@ export class HomePage implements OnInit {
     private appData: AppDataService,
     private alertController: AlertController,
     private router: Router) {
-    this.ref.on('value', resp => {
-      this.infos = [];
-      this.infos = snapshotToArray(resp);
-    });
+    // this.ref.on('value', resp => {
+    //   this.infos = [];
+    //   this.infos = snapshotToArray(resp);
+    // });
   }
   addInfo() {
     this.router.navigate(['/add-info']);
@@ -69,7 +69,7 @@ export class HomePage implements OnInit {
         }, {
           text: 'Okay',
           handler: () => {
-            firebase.database().ref('infos/' + key).remove();
+        //    firebase.database().ref('infos/' + key).remove();
           }
         }
       ]

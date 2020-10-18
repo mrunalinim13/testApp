@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from 'Firebase';
+//import * as firebase from 'Firebase';
 import { ActivatedRoute, Router } from '@angular/router';
 export const snapshotToArray = snapshot => {
   let returnArr = [];
@@ -16,18 +16,18 @@ export const snapshotToArray = snapshot => {
   styleUrls: ['./order-status.page.scss'],
 })
 export class OrderStatusPage implements OnInit {
-  ref = firebase.database().ref('orders/');
+//  ref = firebase.database().ref('orders/');
   info = {};
   orderDetails = []
   constructor(
     private route: ActivatedRoute,
     public router: Router
   ) { 
-    this.ref.on('value', resp => {
-      this.orderDetails = [];
-      this.orderDetails = snapshotToArray(resp);
-      console.log("data of order  : ", this.orderDetails)
-    });
+    // this.ref.on('value', resp => {
+    //   this.orderDetails = [];
+    //   this.orderDetails = snapshotToArray(resp);
+    //   console.log("data of order  : ", this.orderDetails)
+    // });
     
   }
 

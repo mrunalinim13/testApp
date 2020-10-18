@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 import { error } from 'protractor';
 import { FirebaseAuthentication } from "@ionic-native/firebase-authentication/ngx";
 @Component({

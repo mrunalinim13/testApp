@@ -10,8 +10,7 @@ export const environment = {
     databaseURL: 'https://laundryapp-a34bf.firebaseio.com/',
     projectId: 'laundryapp-a34bf',
     storageBucket: 'laundryapp-a34bf.appspot.com',
-    messagingSenderId: '648918167989',
-    appId: "1:648918167989:web:f00f346b81847021db69fc"
+    messagingSenderId: '648918167989'
   }
 };
 

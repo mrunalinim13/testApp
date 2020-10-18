@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from 'Firebase';
+//import * as firebase from 'Firebase';
 export const snapshotToArray = snapshot => {
   let returnArr = [];
 
@@ -18,7 +18,7 @@ export const snapshotToArray = snapshot => {
 })
 export class RateCardPage implements OnInit {
   rateCardDetails: any[];
-  ref = firebase.database().ref('rateCardData/');
+  //ref = firebase.database().ref('rateCardData/');
   rateCardData = [{
     id: 1,
     name: "Shirt",
@@ -38,9 +38,9 @@ export class RateCardPage implements OnInit {
     steamIron: 15
   }]
   constructor() {
-    this.ref.on('value', resp => {
-      this.rateCardDetails = snapshotToArray(resp);
-    });
+    // this.ref.on('value', resp => {
+    //   this.rateCardDetails = snapshotToArray(resp);
+    // });
     console.log("rate card data : ", this.rateCardDetails)
   }
 

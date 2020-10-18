@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { from } from 'rxjs';
-import * as firebase from 'Firebase';
+//import * as firebase from 'Firebase';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-custom-popup',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./custom-popup.page.scss'],
 })
 export class CustomPopupPage implements OnInit {
-  ref = firebase.database().ref('orders/');
+  //ref = firebase.database().ref('orders/');
   @Input() imgPath: string;
   @Input() alertMessage: string;
   @Input() alertButtonText: string;
@@ -18,9 +18,9 @@ export class CustomPopupPage implements OnInit {
   @Input() alertButtonText2: string;
   @Input() popupName: string;
   @Input() action: string;
-  private minDate: any;
+  public minDate: any;
 
-  private requestForm = new FormGroup({
+  public requestForm = new FormGroup({
     time: new FormControl(),
     date: new FormControl(),
     qty: new FormControl(),
@@ -29,14 +29,14 @@ export class CustomPopupPage implements OnInit {
     orderStatus: new FormControl(),
     totalBill: new FormControl(),
   })
-  private profileForm = new FormGroup({
+  public profileForm = new FormGroup({
     name: new FormControl(),
     mobileNo: new FormControl(),
     address: new FormControl(),
     pin: new FormControl(),
   })
   constructor(public modalController: ModalController,
-    private router: Router,
+    public router: Router,
     public formBuilder: FormBuilder) {
     let date = new Date()
     let date1= new Date(date).toISOString()
@@ -84,8 +84,8 @@ export class CustomPopupPage implements OnInit {
   }
   saveInfo() {
     console.log("request form data : ", this.requestForm)
-    let newInfo = firebase.database().ref('orders/').push();
-    newInfo.set(this.requestForm.value);
+  //  let newInfo = firebase.database().ref('orders/').push();
+    //newInfo.set(this.requestForm.value);
     this.modalController.dismiss({
       'dismissed': true
     })
